@@ -2,6 +2,8 @@ import face_recognition
 import cv2
 import numpy as np
 
+# Built of example from https://github.com/ageitgey/face_recognition
+
 # Get a reference to webcam #0 (the default one)
 video_capture = cv2.VideoCapture(0)
 
@@ -17,16 +19,47 @@ cody_face_encoding = face_recognition.face_encodings(cody_image)[0]
 mercy_image = face_recognition.load_image_file("mercy.jpeg")
 mercy_face_encoding = face_recognition.face_encodings(mercy_image)[0]
 
+# Load a Tom Brady's picture and learn how to recognize it.
+brady_image = face_recognition.load_image_file("brady.png")
+brady_face_encoding = face_recognition.face_encodings(brady_image)[0]
+
+elon_image = face_recognition.load_image_file("elon.jpeg")
+elon_face_encoding = face_recognition.face_encodings(elon_image)[0]
+
+rdjr_image = face_recognition.load_image_file("robertDowny.jpg")
+rdjr_face_encoding = face_recognition.face_encodings(rdjr_image)[0]
+
+rodriguez_image = face_recognition.load_image_file("Rodriguez.jpg")
+rodriguez_face_encoding = face_recognition.face_encodings(rodriguez_image)[0]
+
+serena_image = face_recognition.load_image_file("Serena.jpg")
+serena_face_encoding = face_recognition.face_encodings(serena_image)[0]
+
+trump_image = face_recognition.load_image_file("trump.jpg")
+trump_face_encoding = face_recognition.face_encodings(trump_image)[0]
+
 # Create arrays of known face encodings and their names
 known_face_encodings = [
     obama_face_encoding,
     cody_face_encoding, 
-    mercy_face_encoding
+    mercy_face_encoding,
+    brady_face_encoding,
+    elon_face_encoding,
+    rdjr_face_encoding,
+    rodriguez_face_encoding,
+    serena_face_encoding,
+    trump_face_encoding
 ]
 known_face_names = [
     "Barack Obama",
     "Cody Polton",
-    "Mecry Housh"
+    "Mecry Housh",
+    "Tom Brady",
+    "Elon Musk",
+    "Robert Downey Jr.",
+    "Alex Rodriguez",
+    "Serena Williams",
+    "Donald Trump"
 ]
 
 # Initialize some variables
