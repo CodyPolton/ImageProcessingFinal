@@ -38,6 +38,30 @@ serena_face_encoding = face_recognition.face_encodings(serena_image)[0]
 trump_image = face_recognition.load_image_file("trump.jpg")
 trump_face_encoding = face_recognition.face_encodings(trump_image)[0]
 
+anne_image = face_recognition.load_image_file("Anne_Hathaway.jpg")
+anne_face_encoding = face_recognition.face_encodings(anne_image)[0]
+
+brad_image = face_recognition.load_image_file("BradPitt.jpg")
+brad_face_encoding = face_recognition.face_encodings(brad_image)[0]
+
+julia_image = face_recognition.load_image_file("JuliaRoberts.jpg")
+julia_face_encoding = face_recognition.face_encodings(julia_image)[0]
+
+matt_image = face_recognition.load_image_file("Matthew-McConaughey.jpg")
+matt_face_encoding = face_recognition.face_encodings(matt_image)[0]
+
+patrick_image = face_recognition.load_image_file("PatrickMahomes.jpeg")
+patrick_face_encoding = face_recognition.face_encodings(patrick_image)[0]
+
+tom_image = face_recognition.load_image_file("tomhanks.jpg")
+tom_face_encoding = face_recognition.face_encodings(tom_image)[0]
+
+will_image = face_recognition.load_image_file("willsmith.jpg")
+will_face_encoding = face_recognition.face_encodings(will_image)[0]
+
+ye_image = face_recognition.load_image_file("YeDuan.jpg")
+ye_face_encoding = face_recognition.face_encodings(ye_image)[0]
+
 # Create arrays of known face encodings and their names
 known_face_encodings = [
     obama_face_encoding,
@@ -48,7 +72,15 @@ known_face_encodings = [
     rdjr_face_encoding,
     rodriguez_face_encoding,
     serena_face_encoding,
-    trump_face_encoding
+    trump_face_encoding,
+    anne_face_encoding,
+    brad_face_encoding,
+    julia_face_encoding,
+    matt_face_encoding,
+    patrick_face_encoding,
+    tom_face_encoding,
+    will_face_encoding,
+    ye_face_encoding
 ]
 known_face_names = [
     "Barack Obama",
@@ -59,7 +91,15 @@ known_face_names = [
     "Robert Downey Jr.",
     "Alex Rodriguez",
     "Serena Williams",
-    "Donald Trump"
+    "Donald Trump",
+    "Anne Hathaway",
+    "Brad Pitt",
+    "Julia Roberts",
+    "Patrick Mahomes",
+    "Tom Hanks",
+    "Will Smith",
+    "Ye Duan"
+
 ]
 
 # Initialize some variables
